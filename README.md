@@ -2,22 +2,15 @@
 
 **Full Doxygen Documentation:** [Click here to see](https://razvancioc.github.io/Smart-Thermostat/)
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/548cab93-a874-471b-bf3e-256a68c272d4" width="700">
-</p>
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/72551469-0a98-43d5-9559-52203ed5cc8a" width="700">
-</p>
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/2cc0adfd-d64e-4385-be69-4c6eae077fa8" width="700">
-</p>
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/a1727a2e-e62a-4740-bf8e-e7f510764592" width="700">
-</p>
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/815810e3-a463-423b-a559-bf7d20fc0c24" width="700">
-</p>
-
+<img src="https://github.com/user-attachments/assets/b2045697-3b2f-411d-bceb-7a9be7180e15" width="700" />
+<br>
+<img src="https://github.com/user-attachments/assets/cdd0feab-56b2-485b-9c8e-1ec8ff45d50c" width="700" />
+<br>
+<img src="https://github.com/user-attachments/assets/eedde6bf-2f6d-4821-b6ed-538366ae7f01" width="700" />
+<br>
+<img src="https://github.com/user-attachments/assets/7d24183a-8c17-46d3-be11-2be101cd688f" width="700" />
+<br>
+<img src="https://github.com/user-attachments/assets/66fbad19-56c8-43d5-884e-f752f14e116c" width="700" />
 ## Bill of Materials (BOM)
 
 | Item / Component | Qty | Specifications / Model | Role in Project |
@@ -31,9 +24,7 @@
 
 ## Hardware Schematic
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/57bbcd97-4fd3-4491-b93b-ee2c3730dff6" width="900">
-</p>
+<img src="https://github.com/user-attachments/assets/3a502fb7-854c-42b3-b28a-4271530d5187" width="900" />
 
 ## The Build Process & Engineering Journey
 
