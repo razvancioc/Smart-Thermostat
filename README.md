@@ -1,5 +1,5 @@
 # ESP32-Smart-Thermostat-Blynk-APP
-
+[![Doxygen Documentation](https://img.shields.io/badge/docs-Doxygen-blue.svg)](https://razvancioc.github.io/Smart-Thermostat/)
 <p align="center">
   <img src="https://github.com/user-attachments/assets/548cab93-a874-471b-bf3e-256a68c272d4" width="700">
 </p>
