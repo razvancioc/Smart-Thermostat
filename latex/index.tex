@@ -1,0 +1,62 @@
+\chapter{ESP32-\/\+Smart-\/\+Thermostat-\/\+Blynk-\/\+APP }
+\hypertarget{index}{}\label{index}\index{ESP32-\/Smart-\/Thermostat-\/Blynk-\/APP@{ESP32-\/Smart-\/Thermostat-\/Blynk-\/APP}}
+\label{index_md__r_e_a_d_m_e}%
+\Hypertarget{index_md__r_e_a_d_m_e}%
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+ \hypertarget{index_autotoc_md1}{}\doxysection{\texorpdfstring{Bill of Materials (BOM)}{Bill of Materials (BOM)}}\label{index_autotoc_md1}
+
+\begin{DoxyTable}{4}{}{}{1}
+\SetCell{bg=\tableheadbgcolor,font=\bfseries}Item /\+ Component  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Qty  &\SetCell{bg=\tableheadbgcolor,font=\bfseries}Specifications /\+ Model  &\SetCell{bg=\tableheadbgcolor,font=\bfseries}Role in Project  \\
+{\bfseries{Microcontroller}}  &\SetCell{c}1  &ESP32 Development Board  &Main brain, Wi-\/\+Fi connectivity, and UI rendering.  \\
+{\bfseries{Display}}  &\SetCell{c}1  &1.\+69"{} IPS LCD Module  &ST7789 driver, 240x280 resolution, SPI interface.  \\
+\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\+Sensor\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}  &\SetCell{c}1  &DHT11 Module  &Temperature and humidity reading (3-\/pin variant).  \\
+\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\+Relay\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}  &\SetCell{c}1  &CW-\/020 5V Module  &Low-\/level trigger; actuates the boiler\textquotesingle{}s dry contact.  \\
+\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\+Wiring\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}  &\SetCell{c}Set  &Jumper Wires (Dupont)  &For connections between modules.  \\
+\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\+Power Supply\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}  &\SetCell{c}1  &5V Power Source (USB)  &Powers the ESP32, which in turn provides 3.\+3V to the peripherals.  \\
+\end{DoxyTable}
+\hypertarget{index_autotoc_md2}{}\doxysection{\texorpdfstring{Hardware Schematic}{Hardware Schematic}}\label{index_autotoc_md2}
+ \hypertarget{index_autotoc_md3}{}\doxysection{\texorpdfstring{The Build Process \& Engineering Journey}{The Build Process \& Engineering Journey}}\label{index_autotoc_md3}
+Building this thermostat wasn\textquotesingle{}t just about putting parts together; it involved solving real hardware and software constraints. Here is how the project evolved:\+\hypertarget{index_autotoc_md4}{}\doxysubsection{\texorpdfstring{Phase 1:\+ Breadboard Prototyping \& Sensor Logic}{Phase 1:\+ Breadboard Prototyping \& Sensor Logic}}\label{index_autotoc_md4}
+The project started on a messy breadboard. The primary goal was to establish reliable communication between the ESP32, the DHT11 sensor, and the Blynk IoT cloud.
+\begin{DoxyItemize}
+\item {\bfseries{Challenge:\+}} The DHT11 sensor reading blocked the main loop.
+\item {\bfseries{Solution:\+}} Implemented {\ttfamily Blynk\+Timer} to read the sensor asynchronously every 2 seconds without halting the microcontroller.
+\end{DoxyItemize}\hypertarget{index_autotoc_md5}{}\doxysubsection{\texorpdfstring{Phase 2:\+ Designing the Neumorphic UI \& Beating RAM Limits}{Phase 2:\+ Designing the Neumorphic UI \& Beating RAM Limits}}\label{index_autotoc_md5}
+I wanted a premium, "{}\+Frosted Glass"{} UI similar to modern smart home hubs (like Ecobee).
+\begin{DoxyItemize}
+\item {\bfseries{Challenge:\+}} Drawing complex graphics and clearing the screen ({\ttfamily fill\+Screen}) on an IPS display caused severe flickering. Attempting to use a full RAM Sprite (off-\/screen buffer) resulted in static/\+memory corruption because the ESP32 didn\textquotesingle{}t have the contiguous \texorpdfstring{$\sim$}{\string~}134\+KB of free RAM required while running Wi\+Fi cryptography in the background.
+\item {\bfseries{Solution:\+}} I engineered a {\bfseries{State-\/\+Tracking System}}. The display now only redraws specific elements {\itshape if and only if} the temperature, humidity, or setpoint changes. Furthermore, to achieve the "{}transparent"{} text effect without RAM-\/heavy sprites, I dynamically matched the text background color to the underlying frosted glass circle color.
+\end{DoxyItemize}\hypertarget{index_autotoc_md6}{}\doxysubsection{\texorpdfstring{Phase 3:\+ Hardware Actuation \& Hysteresis}{Phase 3:\+ Hardware Actuation \& Hysteresis}}\label{index_autotoc_md6}
+Connecting the 5V CW-\/020 relay to safely control a boiler\textquotesingle{}s dry contact.
+\begin{DoxyItemize}
+\item {\bfseries{Challenge:\+}} Preventing "{}short-\/cycling"{} (the boiler turning on/\+off rapidly when the room temperature hovers exactly around the target).
+\item {\bfseries{Solution:\+}} Programmed a {\ttfamily 0.\+5°C} hysteresis logic. If the target is 22°C, heating starts at 21.\+5°C and stops at 22.\+5°C, protecting the physical hardware from premature wear.
+\end{DoxyItemize}\hypertarget{index_autotoc_md7}{}\doxysubsection{\texorpdfstring{Phase 4:\+ PCB Design \& Professional Workflows}{Phase 4:\+ PCB Design \& Professional Workflows}}\label{index_autotoc_md7}
+Transitioned from the breadboard to a formal schematic using {\bfseries{Ki\+Cad}} to document the exact pinouts, logic-\/level power distribution, and safe relay wiring for future PCB fabrication. The codebase was also migrated from Arduino IDE to {\bfseries{Visual Studio Code (C++)}}, complete with automated {\bfseries{Doxygen}} documentation for clean, maintainable architecture.
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md9}{}\doxysection{\texorpdfstring{⚠️ Critical Display Configuration (TFT\+\_\+e\+SPI)}{⚠️ Critical Display Configuration (TFT\+\_\+e\+SPI)}}\label{index_autotoc_md9}
+{\bfseries{Important:\+}} If you simply compile the {\ttfamily \doxylink{main_8cpp}{main.\+cpp}} file, the display will remain blank (white screen). The {\ttfamily TFT\+\_\+e\+SPI} library requires hardware-\/specific configurations to know which display driver and pins you are using.
+
+You need to inject the display settings directly into your {\ttfamily platformio.\+ini} file using build flags. Add the following to your {\ttfamily platformio.\+ini}:\+
+
+\`{}\`{}\`{}ini build\+\_\+flags = -\/D USER\+\_\+\+SETUP\+\_\+\+LOADED=1 -\/D ST7789\+\_\+\+DRIVER=1 -\/D TFT\+\_\+\+WIDTH=240 -\/D TFT\+\_\+\+HEIGHT=280 -\/D TFT\+\_\+\+MOSI=23 -\/D TFT\+\_\+\+SCLK=18 -\/D TFT\+\_\+\+CS=5 -\/D TFT\+\_\+\+DC=2 -\/D TFT\+\_\+\+RST=4 -\/D LOAD\+\_\+\+GLCD=1 -\/D LOAD\+\_\+\+FONT2=1 -\/D LOAD\+\_\+\+FONT4=1 -\/D LOAD\+\_\+\+FONT6=1 -\/D SPI\+\_\+\+FREQUENCY=27000000 
