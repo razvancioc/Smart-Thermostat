@@ -1,0 +1,4 @@
+var searchData=
+[
+  ['ram_20limits_0',['Phase 2: Designing the Neumorphic UI &amp;amp; Beating RAM Limits',['../index.html#autotoc_md5',1,'']]]
+];
