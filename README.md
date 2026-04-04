@@ -2,15 +2,15 @@
 
 **Full Doxygen Documentation:** [Click here to see](https://razvancioc.github.io/Smart-Thermostat/)
 
-<img src="https://github.com/user-attachments/assets/b2045697-3b2f-411d-bceb-7a9be7180e15" width="700" />
+<img src="Media/IMG_5930.png" width="700" />
 <br>
-<img src="https://github.com/user-attachments/assets/cdd0feab-56b2-485b-9c8e-1ec8ff45d50c" width="700" />
+<img src="Media/IMG_5931.png" width="700" />
 <br>
-<img src="https://github.com/user-attachments/assets/eedde6bf-2f6d-4821-b6ed-538366ae7f01" width="700" />
+<img src="Media/IMG_5932.png" width="700" />
 <br>
-<img src="https://github.com/user-attachments/assets/7d24183a-8c17-46d3-be11-2be101cd688f" width="700" />
+<img src="Media/IMG_5933.png" width="700" />
 <br>
-<img src="https://github.com/user-attachments/assets/66fbad19-56c8-43d5-884e-f752f14e116c" width="700" />
+<img src="Media/IMG_5934.png" width="700" />
 ## Bill of Materials (BOM)
 
 | Item / Component | Qty | Specifications / Model | Role in Project |
@@ -24,7 +24,7 @@
 
 ## Hardware Schematic
 
-<img src="https://github.com/user-attachments/assets/3a502fb7-854c-42b3-b28a-4271530d5187" width="900" />
+<img src="Media/Screenshot 2026-04-04 at 16.23.37.png" width="900" />
 
 ## The Build Process & Engineering Journey
 
