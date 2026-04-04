@@ -1,16 +1,18 @@
 # ESP32-Smart-Thermostat-Blynk-APP
 
-**Full Doxygen Documentation:** [Click here to see](https://razvancioc.github.io/Smart-Thermostat/)
+**Full Doxygen Documentation:** [Click here to see it](https://razvancioc.github.io/Smart-Thermostat/)
 
-<img src="Media/IMG_5930.png" width="700" />
-<br>
-<img src="Media/IMG_5931.png" width="700" />
-<br>
-<img src="Media/IMG_5932.png" width="700" />
-<br>
-<img src="Media/IMG_5933.png" width="700" />
-<br>
-<img src="Media/IMG_5934.png" width="700" />
+<p align="center">
+  <img src="https://raw.githubusercontent.com/razvancioc/Smart-Thermostat/main/Media/IMG_5930.png" width="700" />
+  <br>
+  <img src="https://raw.githubusercontent.com/razvancioc/Smart-Thermostat/main/Media/IMG_5931.png" width="700" />
+  <br>
+  <img src="https://raw.githubusercontent.com/razvancioc/Smart-Thermostat/main/Media/IMG_5932.png" width="700" />
+  <br>
+  <img src="https://raw.githubusercontent.com/razvancioc/Smart-Thermostat/main/Media/IMG_5933.png" width="700" />
+  <br>
+  <img src="https://raw.githubusercontent.com/razvancioc/Smart-Thermostat/main/Media/IMG_5934.png" width="700" />
+</p>
 ## Bill of Materials (BOM)
 
 | Item / Component | Qty | Specifications / Model | Role in Project |
@@ -24,7 +26,9 @@
 
 ## Hardware Schematic
 
-<img src="Media/Screenshot 2026-04-04 at 16.23.37.png" width="900" />
+<p align="center">
+  <img src="https://raw.githubusercontent.com/razvancioc/Smart-Thermostat/main/Media/Screenshot%202026-04-04%20at%2016.23.37.png" width="900" />
+</p>
 
 ## The Build Process & Engineering Journey
 
