@@ -1,5 +1,9 @@
 # ESP32-Smart-Thermostat-Blynk-APP
 
+![Platform: Fusion 360](https://img.shields.io/badge/CAD-Fusion_360-blue)
+![Status: Functional Prototype](https://img.shields.io/badge/Status-Functional_Prototype-brightgreen)
+![Platform: C++ / ESP32](https://img.shields.io/badge/Controller-ESP32-lightgrey)
+
 **Full Doxygen Documentation:** [Click here to see it](https://razvancioc.github.io/Smart-Thermostat/)
 
 <p align="center">
