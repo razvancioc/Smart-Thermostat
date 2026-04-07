@@ -13,6 +13,7 @@
   <br>
   <img src="https://raw.githubusercontent.com/razvancioc/Smart-Thermostat/main/Media/IMG_5934.png" width="700" />
 </p>
+
 ## Bill of Materials (BOM)
 
 | Item / Component | Qty | Specifications / Model | Role in Project |
